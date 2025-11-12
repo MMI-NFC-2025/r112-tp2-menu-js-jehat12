@@ -10,4 +10,5 @@ console.log("isOpen : ", isOpen, "isClosed : ", isClosed);
   // Mise à jour des attributs ARIA pour accessibilité
   nav.ariaHidden = isOpen;
   toggle.ariaExpanded = isClosed;
+  document.body.classList.toggle("noscroll", isClosed);
 });
