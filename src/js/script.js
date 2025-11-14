@@ -12,3 +12,13 @@ console.log("isOpen : ", isOpen, "isClosed : ", isClosed);
   toggle.ariaExpanded = isClosed;
   document.body.classList.toggle("noscroll", isClosed);
 });
+
+// Collapsible menu functionality
+document.querySelectorAll('.category').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
+    const sub = document.querySelector(`.sub[data-owner="${target}"]`);
+    if (!sub) return;
+    sub.hidden = !sub.hidden;
+  });
+});

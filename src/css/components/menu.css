@@ -40,3 +40,25 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
     90deg
   ); /* Fait pivoter le bouton de menu de 90 degrés lorsqu'il est en état "expanded" */
 }
+
+/* Règles demandées par le TP : icônes injectées via CSS ::before et chemin relatif vers public/icones/ */
+nav > h4::before {
+  content: url("../../../public/icones/book.svg");
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+
+nav > ul > li > .category::before {
+  content: url("../../../public/icones/bag-plus.svg");
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+
+nav > ul > li > ul > li > a::before {
+  content: url("../../../public/icones/archive.svg");
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}

@@ -20,9 +20,24 @@
         🍔
       </a>
 
-      <!-- Menu principal (vide par demande) -->
+      <!-- Menu principal -->
       <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+        <h4>Menu</h4>
         <ul class="menu__list list-unstyled">
+          <li>
+            <button class="category" data-target="dogs">Chiens ▾</button>
+            <ul class="sub" data-owner="dogs" hidden>
+              <li><a href="/dogs/chien-1.html">Chien 1</a></li>
+              <li><a href="/dogs/chien-2.html">Chien 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="category" data-target="cats">Chats ▾</button>
+            <ul class="sub" data-owner="cats" hidden>
+              <li><a href="/cats/chat-1.html">Chat 1</a></li>
+              <li><a href="/cats/chat-2.html">Chat 2</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- Fin du menu principal -->
