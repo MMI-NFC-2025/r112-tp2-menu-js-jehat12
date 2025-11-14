@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu</title>
+  <link rel="stylesheet" href="/src/css/components/menu.css">
+</head>
+<body>
+  <header>
+    <h1>Menu</h1>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li>
+          <button class="category" data-target="dogs">Chiens ▾</button>
+          <ul class="sub" data-owner="dogs" hidden>
+            <li><a href="/dogs/chien-1.html">Chien 1</a></li>
+            <li><a href="/dogs/chien-2.html">Chien 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="category" data-target="cats">Chats ▾</button>
+          <ul class="sub" data-owner="cats" hidden>
+            <li><a href="/cats/chat-1.html">Chat 1</a></li>
+            <li><a href="/cats/chat-2.html">Chat 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </main>
+  <script>
+    document.querySelectorAll('.category').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+        const sub = document.querySelector(`.sub[data-owner="${target}"]`);
+        if (!sub) return;
+        sub.hidden = !sub.hidden;
+      });
+    });
+  </script>
+</body>
+</html>
